@@ -1,5 +1,7 @@
 package HomeWork;
 
+import java.io.IOException;
+import java.nio.channels.NonWritableChannelException;
 import java.util.Scanner;
 
 public class Homework_2 {
@@ -73,4 +75,27 @@ public class Homework_2 {
         System.out.println(a + b);
      }
      */
+
+
+
+
+    // 4
+    // Разработайте программу, которая выбросит Exception, когда пользователь вводит пустую строку. 
+    // Пользователю должно показаться сообщение, что пустые строки вводить нельзя.
+
+     public static void white(){
+        String word = new String();
+        System.out.println("Введите строку: ");
+        Scanner iOScanner = new Scanner(System.in);
+            word = iOScanner.nextLine();
+        if (word.isEmpty()){
+            throw new IllegalArgumentException("Строку нельзя оставлять пустой");
+        }
+     } 
+
+    public static void main(String[] args) {
+        white();
+    }
+
+
 }
